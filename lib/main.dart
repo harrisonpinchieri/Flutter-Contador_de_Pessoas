@@ -10,28 +10,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   int _people = 0;
   String _infoText = "Pode Entrar!";
 
-  void _changePeople(int delta){
-
+  void _changePeople(int delta) {
     // Executa o código dentro e  atualiza a tela em tempo de execução
     setState(() {
-      _people +=delta;
-      if(_people <0 ){
+      _people += delta;
+      if (_people < 0) {
         _infoText = "Mundo invertido?!";
-      }else if (_people <=10){
-
+      } else if (_people <= 10) {
         _infoText = "Pode Entrar!";
-      }else{
+      } else {
         _infoText = "Lotado!";
       }
     });
-
-
   }
-
 
   @override
   Widget build(BuildContext context) {
